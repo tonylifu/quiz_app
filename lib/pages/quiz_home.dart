@@ -26,7 +26,7 @@ class QuizHome extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            TextButton(
+            OutlinedButton(
                 onPressed: startQuiz,
                 child: const Text(
                   "Start Quiz",
