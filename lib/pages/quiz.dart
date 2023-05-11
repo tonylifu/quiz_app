@@ -38,11 +38,15 @@ class _Quiz extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: currentScreen == "questions-screen"
-              ? const QuestionsScreen()
-              : StartScreen(switchScreen),
+          child: getScreen(currentScreen),
         ),
       ),
     );
+  }
+
+  Widget getScreen(String screenWgt) {
+    return screenWgt == "questions-screen"
+        ? const QuestionsScreen()
+        : StartScreen(switchScreen);
   }
 }

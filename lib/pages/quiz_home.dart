@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app/pages/util/title_text_widget.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() startQuiz;
@@ -18,12 +20,8 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 80,
           ),
-          const Text(
-            "Learn Flutter the Fun Way!",
-            style: TextStyle(
-              fontSize: 24,
-              color: Color.fromARGB(255, 177, 132, 202),
-            ),
+          const TitleTextWidget(
+            titleText: "Learn Flutter the Fun Way!",
           ),
           const SizedBox(
             height: 80,
