@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/pages/util/title_text_widget.dart';
 
 class StartScreen extends StatelessWidget {
