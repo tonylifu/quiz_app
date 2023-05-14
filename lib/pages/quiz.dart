@@ -26,12 +26,17 @@ class _Quiz extends State<Quiz> {
   void choseAnswer(String answer) {
     selectedAnswers.add(answer);
     if (selectedAnswers.length == questions.length) {
-      //todo => go to result screen
       setState(() {
-        //selectedAnswers = [];
         currentScreen = "result-screen";
       });
     }
+  }
+
+  void restartQuiz() {
+    selectedAnswers = [];
+    setState(() {
+      currentScreen = "start-screen";
+    });
   }
 
   @override
@@ -65,6 +70,7 @@ class _Quiz extends State<Quiz> {
         : screenWgt == "result-screen"
             ? ResultScreen(
                 chosenAnswers: selectedAnswers,
+                restartQuiz: restartQuiz,
               )
             : StartScreen(switchScreen);
   }
